@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="290" viewBox="0 0 680 290" role="img" aria-label="海上风机结构示意图">
+<defs>
+  <linearGradient id="tower" x1="0" x2="1"><stop stop-color="#294c63"/><stop offset=".5" stop-color="#c4e7eb"/><stop offset="1" stop-color="#5c8c9e"/></linearGradient>
+  <linearGradient id="blade"><stop stop-color="#d6f2ef"/><stop offset="1" stop-color="#528895"/></linearGradient>
+  <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1a5662" stop-opacity=".2"/><stop offset="1" stop-color="#11324a" stop-opacity="0"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#43d7bf" stop-opacity=".2"/><stop offset="1" stop-color="#43d7bf" stop-opacity="0"/></radialGradient>
+  <g id="rotor"><path d="M 0 -4 C -9 -18 -8 -64 -1 -104 C 3 -111 5 -105 5 -97 L 6 -15 Z" fill="url(#blade)"/><path d="M 0 -4 C -9 -18 -8 -64 -1 -104 C 3 -111 5 -105 5 -97 L 6 -15 Z" fill="url(#blade)" transform="rotate(120)"/><path d="M 0 -4 C -9 -18 -8 -64 -1 -104 C 3 -111 5 -105 5 -97 L 6 -15 Z" fill="url(#blade)" transform="rotate(240)"/><circle r="7" fill="#bfdedc" stroke="#628f9e" stroke-width="2"/></g>
+  <g id="turbine"><path d="M -4 0 L -9 150 L 9 150 L 4 0 Z" fill="url(#tower)"/><path d="M -5 -4 L 21 -4 L 25 5 L -5 7 Z" fill="#789dab"/><use href="#rotor"/><path d="M -8 150 L -8 165 L 8 165 L 8 150 Z" fill="#dfac63"/><ellipse cx="0" cy="166" rx="28" ry="6" stroke="#2d7280" fill="none"/></g>
+</defs>
+<ellipse cx="368" cy="133" rx="186" ry="137" fill="url(#glow)"/>
+<ellipse cx="368" cy="237" rx="248" ry="43" fill="url(#sea)"/>
+<g fill="none" stroke="#245065" stroke-width=".7" opacity=".58">
+<path d="M62 241 Q337 214 626 242 M68 252 Q341 224 631 252 M90 265 Q341 236 616 265 M145 277 Q339 248 581 278"/>
+<path d="M126 223 L49 276 M214 221 L163 282 M298 218 L274 285 M381 216 L392 285 M460 217 L514 282 M532 220 L627 272"/>
+</g>
+<g opacity=".36" transform="translate(164 136) scale(.49)"><use href="#turbine"/></g>
+<g opacity=".5" transform="translate(541 125) scale(.59)"><use href="#turbine"/></g>
+<circle cx="355" cy="110" r="112" fill="none" stroke="#286572" stroke-width=".7" stroke-dasharray="3 7" opacity=".5"/>
+<path d="M355 0 A110 110 0 0 1 464 110" stroke="#40b6aa" stroke-width="1.5" fill="none" opacity=".6"/>
+<g transform="translate(355 110) scale(.82)"><use href="#turbine"/></g>
+<path d="M373 112 L440 85 L500 85" fill="none" stroke="#3d7888" stroke-width=".8"/><circle cx="373" cy="112" r="2" fill="#42e8d0"/>
+<path d="M347 203 L279 195 L229 195" fill="none" stroke="#3d7888" stroke-width=".8"/><circle cx="347" cy="203" r="2" fill="#42e8d0"/>
+<text x="501" y="81" fill="#6997ad" font-family="Arial,sans-serif" font-size="8" letter-spacing="2">ROTOR</text>
+<text x="194" y="192" fill="#6997ad" font-family="Arial,sans-serif" font-size="8" letter-spacing="2">TOWER</text>
+</svg>

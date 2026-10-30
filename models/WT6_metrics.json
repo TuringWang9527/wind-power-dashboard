@@ -1,0 +1,66 @@
+{
+  "artifact_version": 1,
+  "dataset": "DSWE Inland-Offshore Wind Farm Dataset1",
+  "source_doi": "10.5281/zenodo.5516552",
+  "source_sha256": "c755ebefb74d1a4428dbb06a90546b8520e335e55d4211256b2dee953a65bd7d",
+  "turbine": "WT6",
+  "task": "同期气象条件下的相对功率回归；非未来时点预测",
+  "split": "按 Sequence No. 排序 60/20/20 分块；两边界后各隔离 gap 行；无实际时间戳",
+  "gap_rows": 100,
+  "total_rows": 19041,
+  "training_rows_for_model_selection": 11424,
+  "validation_rows": 3708,
+  "final_fit_rows": 15232,
+  "test_rows": 3709,
+  "test_start_sequence": 15335,
+  "source_features": [
+    "V",
+    "D",
+    "air density",
+    "humidity",
+    "I",
+    "S_a",
+    "S_b"
+  ],
+  "encoded_features": [
+    "V",
+    "air density",
+    "humidity",
+    "I",
+    "S_a",
+    "S_b",
+    "wind_direction_sin",
+    "wind_direction_cos"
+  ],
+  "validation_metrics": {
+    "RandomForest": {
+      "r2": 0.8725078787030274,
+      "rmse_rated_power_percentage_points": 10.608537574400097,
+      "mae_rated_power_percentage_points": 7.398238865105661
+    },
+    "HistGradientBoosting": {
+      "r2": 0.8667322273490996,
+      "rmse_rated_power_percentage_points": 10.846170194467406,
+      "mae_rated_power_percentage_points": 7.52857760375386
+    }
+  },
+  "selected_model": "RandomForest",
+  "test_metrics": {
+    "r2": 0.8873931982963343,
+    "rmse_rated_power_percentage_points": 11.060115285390841,
+    "mae_rated_power_percentage_points": 7.819566705445587
+  },
+  "mean_baseline_test_metrics": {
+    "r2": -0.010269673598354512,
+    "rmse_rated_power_percentage_points": 33.12805971070081,
+    "mae_rated_power_percentage_points": 29.275597199097366
+  },
+  "target_unit": "percent_of_rated_power",
+  "error_unit": "rated_power_percentage_points",
+  "importance_method": "测试集固定抽样置换重要性；数值为 RMSE 增量（额定功率百分点）；3 次重复",
+  "importance_rows": 1200,
+  "python_version": "3.12.14",
+  "sklearn_version": "1.8.0",
+  "numpy_version": "2.3.5",
+  "pandas_version": "2.2.3"
+}
